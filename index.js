@@ -1,10 +1,10 @@
-const numericButtons = document.getElementsByTagName("button")
+const buttons = document.getElementsByTagName("button")
 const equals = document.getElementById("equal")
 const ac = document.getElementById("AC")
 const output = document.getElementById("output")
 
-for (let i of numericButtons) {
-    console.log(i)
+// Getting numeric buttons' values
+for (let i of buttons) {
     if (i.innerText === "=") break
     i.addEventListener("click", function() {
         let value = this.innerText
@@ -12,12 +12,18 @@ for (let i of numericButtons) {
     })
 }
 
-equals.addEventListener("click", function() {
-    output.innerText = `Output: ${eval(output.innerText)}`
+// Showing the result
+equals.addEventListener("click", () => {
+    let result;
+    try {
+        result = eval(output.innerText)
+    } catch (e) {
+        result = "Syntax Error"
+    }
+    output.innerText = `Output: ${result}`
 })
 
-ac.addEventListener("click", function() {
-    output.innerText = `Output:`
-})
+// Cleaning the output
+ac.addEventListener("click", () => output.innerText = `Output:`)
 
 
