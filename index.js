@@ -1,29 +1,29 @@
-const buttons = document.getElementsByTagName("button")
-const equals = document.getElementById("equal")
-const ac = document.getElementById("AC")
-const output = document.getElementById("output")
+const buttons = document.getElementsByTagName("button");
+const output = document.getElementById("output");
+
+
+const del = document.getElementById("del");
+const ac = document.getElementById("ac");
+const equals = document.getElementById("equal");
 
 // Getting numeric buttons' values
 for (let i of buttons) {
-    if (i.innerText === "=") break
+    if (i.id) continue;
     i.addEventListener("click", function() {
-        let value = this.innerText
-        output.innerText += value
+        let value = this.innerText;
+        output.innerText += value;
     })
 }
 
-// Showing the result
-equals.addEventListener("click", () => {
-    let result;
-    try {
-        result = eval(output.innerText)
-    } catch (e) {
-        result = "Syntax Error"
-    }
-    output.innerText = `Output: ${result}`
-})
+// Deleting last input
+del.addEventListener("click", () => deleteLast(output))
 
 // Cleaning the output
-ac.addEventListener("click", () => output.innerText = `Output:`)
+ac.addEventListener("click", () => clearDisplay(output));
+
+// Showing the result
+equals.addEventListener("click", () => calculate(output));
+
+
 
 
