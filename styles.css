@@ -1,0 +1,20 @@
+#display {
+
+  align-items: center;
+  margin: 20px;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+#panel {
+  display: grid;
+  grid-template-columns: 75px 75px 75px 75px 75px;
+  grid-template-rows: 75px 75px 75px 75px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#panel button {
+    font-size: 40px;
+}
