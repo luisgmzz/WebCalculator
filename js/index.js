@@ -1,18 +1,16 @@
 const buttons = document.getElementsByTagName("button");
 const output = document.getElementById("output");
 
-
+// Special buttons
 const del = document.getElementById("del");
 const ac = document.getElementById("ac");
 const equals = document.getElementById("equal");
 
+
 // Getting numeric buttons' values
 for (let i of buttons) {
     if (i.id) continue;
-    i.addEventListener("click", function() {
-        let value = this.innerText;
-        output.innerText += value;
-    })
+    i.addEventListener("click", () => updateValue(i))
 }
 
 // Deleting last input
