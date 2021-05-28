@@ -1,8 +1,14 @@
+$display-width: 605px;
+
 #display {
   align-items: center;
+  width: $display-width;
   margin: 20px;
   padding: 10px;
   border: 2px solid black {
     radius: 10px;
   }
 }
+
+//500 = 500
+//4 = 54 + 450 = 454

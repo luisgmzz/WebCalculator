@@ -1,2 +1,8 @@
+@import "./partials/calculator";
 @import "./partials/display";
 @import "./partials/panel";
+
+body {
+    margin: 1rem;
+    padding: 0 1rem
+}
