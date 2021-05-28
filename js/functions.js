@@ -1,6 +1,6 @@
 const updateValue = (object) => {
-    let value = object.getAttribute("value") ? object.getAttribute("value") : object.innerText; 
-     output.innerText += value;
+    let value = object.getAttribute("value") ? object.getAttribute("value") : object.innerText;
+    output.innerText += value;
 }
 
 const deleteLast = (field) => {
@@ -28,7 +28,4 @@ const fact = (number) => {
     }
     return result;
 }
-
-
-
 
