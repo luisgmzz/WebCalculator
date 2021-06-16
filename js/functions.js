@@ -23,5 +23,6 @@ const calculate = (field) => {
         console.log(e);
         result = "Syntax Error";
     }
+    expression = `${result}`;
     field.innerText = `${result}`;
 };

@@ -6,6 +6,7 @@ const del = document.getElementById("del");
 const ac = document.getElementById("ac");
 const equals = document.getElementById("equal");
 
+var ANS;
 // Expression to be evaluated
 var expression = "";
 
@@ -22,7 +23,10 @@ del.addEventListener("click", () => deleteLast(output));
 ac.addEventListener("click", () => clearDisplay(output));
 
 // Showing the result
-equals.addEventListener("click", () => calculate(output));
+equals.addEventListener("click", () => {
+    calculate(output);
+    ANS = output.innerText;
+});
 
 
 
