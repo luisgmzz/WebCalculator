@@ -6,15 +6,17 @@ const del = document.getElementById("del");
 const ac = document.getElementById("ac");
 const equals = document.getElementById("equal");
 
+// Expression to be evaluated
+var expression = "";
 
 // Getting numeric buttons' values
 for (let i of buttons) {
     if (i.id) continue;
-    i.addEventListener("click", () => updateValue(i))
+    i.addEventListener("click", () => updateValue(i));
 }
 
 // Deleting last input
-del.addEventListener("click", () => deleteLast(output))
+del.addEventListener("click", () => deleteLast(output));
 
 // Cleaning the output
 ac.addEventListener("click", () => clearDisplay(output));
