@@ -39,6 +39,10 @@
   border-radius: 10px;
 }
 
+#panel button:hover {
+  border: none;
+}
+
 body {
   margin: 1rem;
   padding: 0 1rem;

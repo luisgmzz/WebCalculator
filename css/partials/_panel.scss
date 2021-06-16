@@ -7,7 +7,7 @@ $gs: 90px;
   }
 
   display: grid;
-  
+
   grid: {
     template: {
       columns: $gs $gs $gs $gs $gs;
@@ -27,6 +27,10 @@ $gs: 90px;
 
     border: 1px solid black {
       radius: 10px;
+    }
+
+    &:hover {
+      border: none;
     }
   }
 }
