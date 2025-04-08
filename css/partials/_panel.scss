@@ -1,36 +1,35 @@
 $gs: 90px;
+$gss: 80px;
 
 #panel {
   padding: {
     top: 100px;
-    left: 95px;
+
   }
 
   display: grid;
 
-  grid: {
-    template: {
-      columns: $gs $gs $gs $gs $gs;
-      rows: $gs $gs $gs $gs $gs;
-    }
-  }
+  grid-template-columns: $gs $gs $gs $gs $gs; // Definir columnas de grid
+  grid-template-rows: $gs $gs $gs $gs $gs; // Definir filas de grid
 
   button {
     margin: 1px;
-    background: {
-      color: #999;
-    }
+    background-color: #999;
 
-    font: {
-      size: 40px;
-    }
+    font-size: 33px;
 
-    border: 1px solid black {
-      radius: 10px;
-    }
+    border: 1px solid black;
+    border-radius: 10px; // Corregir la sintaxis de border-radius
 
     &:hover {
       border: none;
     }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  #panel {
+    grid-template-columns: $gss $gss $gss $gss $gss; // Ajustar columnas para pantallas pequeñas
+    grid-template-rows: $gss $gss $gss $gss $gss; // Ajustar filas para pantallas pequeñas
   }
 }
