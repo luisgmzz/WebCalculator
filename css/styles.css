@@ -42,8 +42,8 @@
 
 @media screen and (max-width: 500px) {
   #panel {
-    grid-template-columns: 80px 80px 80px 80px 80px;
-    grid-template-rows: 80px 80px 80px 80px 80px;
+    grid-template-columns: 70px 70px 70px 70px 70px;
+    grid-template-rows: 70px 70px 70px 70px 70px;
   }
 }
 body {
